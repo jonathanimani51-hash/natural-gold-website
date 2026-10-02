@@ -3,325 +3,631 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NATURAL GOLD - Pure Sunflower Cooking Oil</title>
+    <title>NATURAL GOLD - Pure Sunflower Cooking Oil | Tanzania</title>
+    <meta name="description" content="Premium Pure Sunflower Cooking Oil - Golden taste, Natural choice. Order online from Natural Gold Tanzania.">
+    <meta name="keywords" content="sunflower oil, cooking oil, Tanzania, natural, pure">
+    <meta name="theme-color" content="#D4A574">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-gold: #D4A574;
+            --dark-gold: #8B6F47;
+            --light-cream: #F4E4C1;
+            --off-white: #FAF8F3;
+            --dark-text: #2C2C2C;
+            --light-text: #666;
         }
-        
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--dark-text);
+            background-color: #fff;
+            overflow-x: hidden;
         }
-        
-        header {
-            background: linear-gradient(135deg, #D4A574 0%, #F4E4C1 100%);
-            padding: 40px 20px;
-            text-align: center;
-            color: #fff;
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            font-style: italic;
-            margin: 20px 0;
-            color: #8B6F47;
-        }
-        
-        .intro {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.1rem;
-            color: #555;
-        }
-        
-        .cta-buttons {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .cta-buttons a {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 30px;
-            background-color: #D4A574;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-buttons a:hover {
-            background-color: #8B6F47;
-        }
-        
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-        section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #D4A574;
-        }
-        
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .product-card {
-            background: #f9f9f9;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .product-card h3 {
+        .logo {
             font-size: 1.5rem;
-            color: #D4A574;
-            margin: 10px 0;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        .product-card .price {
+        .logo-icon {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.3rem;
-            font-weight: bold;
-            color: #8B6F47;
-            margin: 10px 0;
         }
-        
-        .product-card p {
-            color: #666;
-            font-size: 0.95rem;
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
         }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .feature {
-            background: #fff9f0;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #D4A574;
-        }
-        
-        .feature h3 {
-            color: #D4A574;
-            margin-bottom: 10px;
-        }
-        
-        .feature p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        .info-section {
-            background: #f5f5f5;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .contact-section {
-            background: #D4A574;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .contact-section h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-        
-        .contact-info {
-            font-size: 1.1rem;
-            margin: 15px 0;
-        }
-        
-        .contact-info a {
-            color: white;
+        .nav-links a {
             text-decoration: none;
-            font-weight: bold;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
         }
-        
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        
-        .qr-section {
-            text-align: center;
-            padding: 30px;
-            background: #fff9f0;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        footer {
-            background: #333;
+        .nav-links a:hover { color: var(--primary-gold); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
             color: white;
-            text-align: center;
-            padding: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
             font-size: 0.9rem;
         }
-        
-        footer p {
-            margin: 5px 0;
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(212,165,116,0.4);
         }
-        
+        .hero {
+            background: linear-gradient(135deg, #D4A574 0%, #F4E4C1 100%);
+            padding: 120px 20px 80px;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .hero .subtitle { font-size: 1.3rem; margin-bottom: 20px; font-weight: 300; opacity: 0.95; }
+        .hero .tagline {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin: 25px 0;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .hero-description {
+            font-size: 1.1rem;
+            margin: 30px 0;
+            line-height: 1.8;
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+        .btn {
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-primary {
+            background: white;
+            color: var(--primary-gold);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-gold);
+            transform: translateY(-3px);
+        }
+        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--light-text);
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #products { background: linear-gradient(to bottom, #FAF8F3, #fff); }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--dark-gold));
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(212,165,116,0.2);
+            border-color: var(--primary-gold);
+        }
+        .product-icon { font-size: 3rem; margin-bottom: 15px; }
+        .product-card h3 {
+            font-size: 1.8rem;
+            color: var(--dark-gold);
+            margin: 10px 0;
+            font-weight: 700;
+        }
+        .product-card .price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 15px 0;
+        }
+        .product-card p { color: var(--light-text); font-size: 0.95rem; margin-bottom: 15px; }
+        .product-card .btn {
+            width: 100%;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        .product-card .btn:hover { transform: translateY(-2px); }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .feature {
+            background: linear-gradient(135deg, #FAF8F3, #fff9f0);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-gold);
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212,165,116,0.15);
+        }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .feature h3 {
+            color: var(--dark-gold);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .feature p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .info-section {
+            background: linear-gradient(135deg, #F4E4C1, #FAF8F3);
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-gold);
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .info-section p { font-size: 1.05rem; line-height: 1.8; color: var(--dark-text); }
+        #contact {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--dark-gold) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        #contact h2 {
+            color: white;
+            -webkit-text-fill-color: white;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .contact-item {
+            background: rgba(255,255,255,0.15);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .contact-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px);
+        }
+        .contact-item-icon { font-size: 2rem; margin-bottom: 12px; }
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .contact-item a:hover { text-decoration: underline; transform: scale(1.05); }
         .disclaimer {
-            font-size: 0.85rem;
-            color: #999;
-            margin-top: 10px;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            opacity: 0.9;
+            font-style: italic;
         }
-        
+        #qr {
+            background: #FAF8F3;
+            text-align: center;
+        }
+        .qr-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            border: 2px solid var(--primary-gold);
+        }
+        .qr-placeholder {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            border-radius: 10px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-gold);
+        }
+        .qr-text { color: var(--light-text); margin-top: 20px; font-size: 0.95rem; }
+        footer {
+            background: #2C2C2C;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+        }
+        footer p { margin: 8px 0; }
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer-links a:hover { text-decoration: underline; }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 999;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(212,165,116,0.4);
+        }
+        .scroll-to-top:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(212,165,116,0.6); }
+        .scroll-to-top.show { display: flex; }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            header p {
-                font-size: 1rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            section h2 {
-                font-size: 1.5rem;
-            }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .hero .tagline { font-size: 1.3rem; }
+            section h2 { font-size: 1.8rem; }
+            .cta-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+            .qr-placeholder { width: 200px; height: 200px; font-size: 2.5rem; }
+            .scroll-to-top { width: 45px; height: 45px; bottom: 20px; right: 20px; font-size: 1.2rem; }
+        }
+        @media (max-width: 480px) {
+            nav { padding: 12px 15px; }
+            .logo { font-size: 1.2rem; }
+            .logo-icon { width: 30px; height: 30px; font-size: 1rem; }
+            .hero { padding: 80px 15px 60px; margin-top: 70px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero .tagline { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>NATURAL GOLD</h1>
-        <p>PURE SUNFLOWER COOKING OIL</p>
-        <p class="tagline">Golden taste. Natural choice.</p>
-    </header>
-    
-    <div class="intro">
-        <p>NATURAL GOLD is a sunflower cooking oil brand created for everyday cooking, bringing a clean, golden experience to homes, kitchens and businesses.</p>
-        <div class="cta-buttons">
-            <a href="#products">View Products</a>
-            <a href="https://wa.me/256225164001">Order on WhatsApp</a>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🌻</div>
+                <span>NATURAL GOLD</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/255622516401?text=Hello%20Natural%20Gold,%20I%20would%20like%20to%20place%20an%20order" class="nav-cta">
+                <i class="fab fa-whatsapp"></i> Order Now
+            </a>
         </div>
-    </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>NATURAL GOLD</h1>
+            <p class="subtitle">PURE SUNFLOWER COOKING OIL</p>
+            <p class="tagline">Golden taste. Natural choice.</p>
+            <p class="hero-description">
+                Premium sunflower cooking oil crafted for everyday excellence. Bringing a clean, golden experience to homes, kitchens, and businesses across Tanzania.
+            </p>
+            <div class="cta-buttons">
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i> View Products
+                </a>
+                <a href="https://wa.me/255622516401?text=Hello%20Natural%20Gold,%20I%20would%20like%20to%20place%20an%20order" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
     
     <section id="products">
         <h2>Our Products</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">Choose the size that fits your home, kitchen or business. Prices below are website prices and can be updated as the business grows.</p>
+        <p class="section-subtitle">Choose the perfect size for your home, kitchen, or business. Premium quality at competitive prices.</p>
         
         <div class="products-grid">
             <div class="product-card">
-                <h3>1 L</h3>
+                <div class="product-icon">🫙</div>
+                <h3>1 Liter</h3>
                 <div class="price">TSh 7,000</div>
                 <p>Pure Sunflower Cooking Oil</p>
+                <p style="font-size: 0.85rem; color: #999;">Perfect for small households</p>
+                <a href="https://wa.me/255622516401?text=I%20would%20like%20to%20order%201%20Liter%20of%20Natural%20Gold%20Oil" class="btn" style="margin-top: 10px;">Order Now</a>
             </div>
             <div class="product-card">
-                <h3>2 L</h3>
+                <div class="product-icon">🫙</div>
+                <h3>2 Liters</h3>
                 <div class="price">TSh 14,000</div>
                 <p>Pure Sunflower Cooking Oil</p>
+                <p style="font-size: 0.85rem; color: #999;">Most popular size</p>
+                <a href="https://wa.me/255622516401?text=I%20would%20like%20to%20order%202%20Liters%20of%20Natural%20Gold%20Oil" class="btn" style="margin-top: 10px;">Order Now</a>
             </div>
             <div class="product-card">
-                <h3>3 L</h3>
+                <div class="product-icon">🫙</div>
+                <h3>3 Liters</h3>
                 <div class="price">TSh 21,000</div>
                 <p>Pure Sunflower Cooking Oil</p>
+                <p style="font-size: 0.85rem; color: #999;">For larger families</p>
+                <a href="https://wa.me/255622516401?text=I%20would%20like%20to%20order%203%20Liters%20of%20Natural%20Gold%20Oil" class="btn" style="margin-top: 10px;">Order Now</a>
             </div>
             <div class="product-card">
-                <h3>4 L</h3>
+                <div class="product-icon">🫙</div>
+                <h3>4 Liters</h3>
                 <div class="price">TSh 28,000</div>
                 <p>Pure Sunflower Cooking Oil</p>
+                <p style="font-size: 0.85rem; color: #999;">Business & bulk</p>
+                <a href="https://wa.me/255622516401?text=I%20would%20like%20to%20order%204%20Liters%20of%20Natural%20Gold%20Oil" class="btn" style="margin-top: 10px;">Order Now</a>
             </div>
             <div class="product-card">
-                <h3>5 L</h3>
+                <div class="product-icon">🫙</div>
+                <h3>5 Liters</h3>
                 <div class="price">TSh 35,000</div>
                 <p>Pure Sunflower Cooking Oil</p>
+                <p style="font-size: 0.85rem; color: #999;">Best value for businesses</p>
+                <a href="https://wa.me/255622516401?text=I%20would%20like%20to%20order%205%20Liters%20of%20Natural%20Gold%20Oil" class="btn" style="margin-top: 10px;">Order Now</a>
             </div>
         </div>
     </section>
     
-    <section>
+    <section id="why">
         <h2>Why NATURAL GOLD?</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">A premium-looking brand built around sunflower cooking oil and a simple promise: make every meal feel better with a dependable cooking essential.</p>
+        <p class="section-subtitle">A premium brand built on quality, transparency, and commitment to enhancing every meal.</p>
         
         <div class="features">
             <div class="feature">
-                <h3>🌻 Sunflower Oil</h3>
-                <p>Made as a sunflower cooking oil product for everyday food preparation.</p>
+                <div class="feature-icon">🌻</div>
+                <h3>Pure Sunflower Oil</h3>
+                <p>Crafted specifically for everyday cooking. 100% pure sunflower oil with no additives or fillers.</p>
             </div>
             <div class="feature">
-                <h3>👨‍🍳 Made for Everyday Cooking</h3>
-                <p>Suitable for kitchens preparing family meals and a wide range of dishes.</p>
+                <div class="feature-icon">👨‍🍳</div>
+                <h3>Everyday Excellence</h3>
+                <p>Ideal for families, professional kitchens, and restaurants. Perfect for frying, sautéing, and baking.</p>
             </div>
             <div class="feature">
-                <h3>✓ Simple & Transparent</h3>
-                <p>Product sizes, current prices and ordering information are presented clearly online.</p>
+                <div class="feature-icon">✓</div>
+                <h3>Transparent & Honest</h3>
+                <p>Clear pricing, genuine product information, and reliable service. What you see is what you get.</p>
             </div>
         </div>
     </section>
     
     <section>
-        <h2>Product Information</h2>
+        <h2>Storage & Care</h2>
         <div class="info-section">
-            <p>Store in a cool, dry place away from direct sunlight. Keep the container tightly closed and follow the final approved label instructions for your product.</p>
+            <p><strong>📌 Storage Instructions:</strong></p>
+            <p style="margin-top: 10px;">Store in a cool, dry place away from direct sunlight. Keep the container tightly closed to preserve freshness and prevent oxidation. Follow the label instructions on your product for optimal quality and shelf life.</p>
         </div>
     </section>
     
-    <section class="contact-section">
-        <h2>Contact & Order</h2>
-        <p>For orders, enquiries and availability:</p>
+    <section id="contact">
+        <h2>Ready to Order?</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.95);">Get in touch with us today for orders, enquiries, and availability information.</p>
+        
         <div class="contact-info">
-            <p>📞 <a href="tel:+2550622516401">0622 516 401</a></p>
-            <p>📞 <a href="tel:+255758106300">0758 106 300</a></p>
-            <p>💬 <a href="https://wa.me/256225164001">Chat on WhatsApp</a></p>
+            <div class="contact-item">
+                <div class="contact-item-icon">📞</div>
+                <p>Phone 1</p>
+                <a href="tel:+255622516401">+255 622 516 401</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item-icon">📞</div>
+                <p>Phone 2</p>
+                <a href="tel:+255758106300">+255 758 106 300</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item-icon">💬</div>
+                <p>WhatsApp</p>
+                <a href="https://wa.me/255622516401?text=Hello%20Natural%20Gold,%20I%20would%20like%20to%20inquire%20about%20your%20products">Chat Now</a>
+            </div>
         </div>
-        <p class="disclaimer">Website prices can be updated independently of the physical product label.</p>
+        
+        <p class="disclaimer">💡 Website prices are regularly updated. Physical product labels may show different prices which are updated independently.</p>
     </section>
     
-    <section class="qr-section">
-        <h3>QR CODE</h3>
-        <p>Links to website after public URL is set</p>
-        <p style="margin-top: 20px; font-style: italic; color: #999;">Scan to visit Natural Gold</p>
+    <section id="qr">
+        <h2>Scan to Order</h2>
+        <p class="section-subtitle">Scan this QR code with your phone to quickly access our WhatsApp channel and place your order.</p>
+        
+        <div class="qr-container">
+            <div class="qr-placeholder">📱</div>
+            <p style="color: var(--dark-gold); font-weight: 600;">QR Code Coming Soon</p>
+            <p class="qr-text">Point your camera at the QR code above to order directly via WhatsApp</p>
+        </div>
     </section>
     
     <footer>
-        <p>&copy; 2026 NATURAL GOLD &bull; Pure Sunflower Cooking Oil &bull; Tanzania</p>
+        <p>&copy; 2026 <strong>NATURAL GOLD</strong> &bull; Pure Sunflower Cooking Oil</p>
+        <p>🇹🇿 Made in Tanzania &bull; Serving Africa with Pride</p>
+        <div class="footer-links">
+            <a href="#products">Products</a>
+            <a href="#why">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://wa.me/255622516401">WhatsApp</a>
+        </div>
     </footer>
+    
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
