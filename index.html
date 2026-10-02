@@ -49,25 +49,30 @@
             align-items: center;
         }
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 0;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            text-decoration: none;
         }
         .logo-icon {
-            width: 35px;
-            height: 35px;
+            width: 45px;
+            height: 45px;
             background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(212,165,116,0.3);
+        }
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .nav-links {
             display: flex;
@@ -85,16 +90,18 @@
         .nav-cta {
             background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
             color: white;
-            padding: 10px 20px;
+            padding: 10px 22px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
         }
         .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(212,165,116,0.4);
+            box-shadow: 0 8px 25px rgba(212,165,116,0.4);
         }
         .hero {
             background: linear-gradient(135deg, #D4A574 0%, #F4E4C1 100%);
@@ -116,6 +123,17 @@
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(20px); }
@@ -125,6 +143,15 @@
             z-index: 2;
             max-width: 800px;
             margin: 0 auto;
+        }
+        .hero-logo {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
         .hero h1 {
             font-family: 'Playfair Display', serif;
@@ -264,7 +291,7 @@
             padding: 10px 20px;
             font-size: 0.9rem;
         }
-        .product-card .btn:hover { transform: translateY(-2px); }
+        .product-card .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212,165,116,0.3); }
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -357,23 +384,32 @@
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            max-width: 400px;
+            max-width: 450px;
             margin: 0 auto;
-            border: 2px solid var(--primary-gold);
+            border: 3px solid var(--primary-gold);
         }
-        .qr-placeholder {
-            width: 250px;
-            height: 250px;
-            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-            border-radius: 10px;
+        .qr-code-image {
+            width: 280px;
+            height: 280px;
             margin: 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary-gold);
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .qr-code-image svg {
+            width: 100%;
+            height: 100%;
         }
         .qr-text { color: var(--light-text); margin-top: 20px; font-size: 0.95rem; }
+        .qr-instruction {
+            margin-top: 20px;
+            padding: 15px;
+            background: #FAF8F3;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--dark-text);
+        }
         footer {
             background: #2C2C2C;
             color: white;
@@ -421,29 +457,31 @@
             .hero h1 { font-size: 2.2rem; }
             .hero .subtitle { font-size: 1rem; }
             .hero .tagline { font-size: 1.3rem; }
+            .hero-logo { font-size: 3rem; }
             section h2 { font-size: 1.8rem; }
             .cta-buttons { flex-direction: column; }
             .btn { width: 100%; }
-            .qr-placeholder { width: 200px; height: 200px; font-size: 2.5rem; }
+            .qr-code-image { width: 220px; height: 220px; }
             .scroll-to-top { width: 45px; height: 45px; bottom: 20px; right: 20px; font-size: 1.2rem; }
         }
         @media (max-width: 480px) {
             nav { padding: 12px 15px; }
-            .logo { font-size: 1.2rem; }
-            .logo-icon { width: 30px; height: 30px; font-size: 1rem; }
+            .logo-icon { width: 38px; height: 38px; font-size: 1.4rem; }
+            .logo-text { font-size: 1rem; }
             .hero { padding: 80px 15px 60px; margin-top: 70px; }
             .hero h1 { font-size: 1.8rem; }
             .hero .tagline { font-size: 1.1rem; }
+            .hero-logo { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo">
+            <a href="#" class="logo">
                 <div class="logo-icon">🌻</div>
-                <span>NATURAL GOLD</span>
-            </div>
+                <span class="logo-text">NATURAL GOLD</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#products">Products</a></li>
                 <li><a href="#why">Why Us</a></li>
@@ -457,6 +495,7 @@
     
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-logo">🌻</div>
             <h1>NATURAL GOLD</h1>
             <p class="subtitle">PURE SUNFLOWER COOKING OIL</p>
             <p class="tagline">Golden taste. Natural choice.</p>
@@ -530,12 +569,12 @@
             <div class="feature">
                 <div class="feature-icon">🌻</div>
                 <h3>Pure Sunflower Oil</h3>
-                <p>Crafted specifically for everyday cooking. 100% pure sunflower oil with no additives or fillers.</p>
+                <p>Crafted specifically for everyday cooking. 100% pure sunflower oil with no additives or fillers. Trusted quality.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">👨‍🍳</div>
                 <h3>Everyday Excellence</h3>
-                <p>Ideal for families, professional kitchens, and restaurants. Perfect for frying, sautéing, and baking.</p>
+                <p>Ideal for families, professional kitchens, and restaurants. Perfect for frying, sautéing, baking, and all cooking needs.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">✓</div>
@@ -549,7 +588,7 @@
         <h2>Storage & Care</h2>
         <div class="info-section">
             <p><strong>📌 Storage Instructions:</strong></p>
-            <p style="margin-top: 10px;">Store in a cool, dry place away from direct sunlight. Keep the container tightly closed to preserve freshness and prevent oxidation. Follow the label instructions on your product for optimal quality and shelf life.</p>
+            <p style="margin-top: 10px;">Store in a cool, dry place away from direct sunlight. Keep the container tightly closed to preserve freshness and prevent oxidation. Follow the label instructions on your product for optimal quality and shelf life. Our oil maintains its premium quality for extended periods when stored properly.</p>
         </div>
     </section>
     
@@ -560,17 +599,17 @@
         <div class="contact-info">
             <div class="contact-item">
                 <div class="contact-item-icon">📞</div>
-                <p>Phone 1</p>
+                <p style="margin-bottom: 10px;">Phone 1</p>
                 <a href="tel:+255622516401">+255 622 516 401</a>
             </div>
             <div class="contact-item">
                 <div class="contact-item-icon">📞</div>
-                <p>Phone 2</p>
+                <p style="margin-bottom: 10px;">Phone 2</p>
                 <a href="tel:+255758106300">+255 758 106 300</a>
             </div>
             <div class="contact-item">
                 <div class="contact-item-icon">💬</div>
-                <p>WhatsApp</p>
+                <p style="margin-bottom: 10px;">WhatsApp</p>
                 <a href="https://wa.me/255622516401?text=Hello%20Natural%20Gold,%20I%20would%20like%20to%20inquire%20about%20your%20products">Chat Now</a>
             </div>
         </div>
@@ -580,12 +619,16 @@
     
     <section id="qr">
         <h2>Scan to Order</h2>
-        <p class="section-subtitle">Scan this QR code with your phone to quickly access our WhatsApp channel and place your order.</p>
+        <p class="section-subtitle">Scan this QR code with your phone to quickly access our WhatsApp channel and place your order directly.</p>
         
         <div class="qr-container">
-            <div class="qr-placeholder">📱</div>
-            <p style="color: var(--dark-gold); font-weight: 600;">QR Code Coming Soon</p>
+            <h3 style="color: var(--dark-gold); margin-bottom: 10px;">WhatsApp QR Code</h3>
+            <div class="qr-code-image" id="qrCode"></div>
+            <p style="color: var(--dark-gold); font-weight: 600; margin-top: 15px;">Scan with your phone camera</p>
             <p class="qr-text">Point your camera at the QR code above to order directly via WhatsApp</p>
+            <div class="qr-instruction">
+                <strong>How to use:</strong> Open your camera app, point it at the QR code, and tap the notification that appears. You'll be connected to our WhatsApp business channel instantly.
+            </div>
         </div>
     </section>
     
@@ -604,7 +647,16 @@
         <i class="fas fa-arrow-up"></i>
     </button>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script>
+        new QRCode(document.getElementById("qrCode"), {
+            text: "https://wa.me/255622516401?text=Hello%20Natural%20Gold,%20I%20would%20like%20to%20place%20an%20order",
+            width: 250,
+            height: 250,
+            colorDark: "#8B6F47",
+            colorLight: "#FFFFFF",
+            correctLevel: QRCode.CorrectLevel.H
+        });
         const scrollToTopBtn = document.getElementById('scrollToTop');
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
